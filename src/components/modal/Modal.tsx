@@ -3,7 +3,7 @@ import { ModalTypes } from './modal.types';
 
 
 
-const Modal = ({ isOpen, onClose, onApply, onCancel, children } : ModalTypes) => {
+const Modal = ({ isOpen, onClose, onApply, onCancel, children }: ModalTypes) => {
   if (!isOpen) return null;
 
   return (
@@ -30,18 +30,18 @@ const Modal = ({ isOpen, onClose, onApply, onCancel, children } : ModalTypes) =>
         </button>
         <div>{children}</div>
         <div className="flex justify-end mt-4">
-          <button
+          {onCancel && <button
             onClick={onCancel}
             className="px-4 py-2 bg-slate-100 text-red rounded mr-2"
           >
             Cancel
-          </button>
-          <button
+          </button>}
+          {onApply && <button
             onClick={onApply}
             className="px-4 py-2 bg-blue-600 text-white rounded"
           >
             Apply
-          </button>
+          </button>}
         </div>
       </div>
     </div>

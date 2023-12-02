@@ -22,7 +22,7 @@ const DashboardHeader = ({resetFilters, searchText, setIsFilterPanelOpen, setSea
             </button>
             {isFilteredResults &&
                 <h3
-                    className='underline text-sm'
+                    className='underline text-sm cursor-pointer'
                     onClick={resetFilters}
                 >Clear</h3>}
         </div>
