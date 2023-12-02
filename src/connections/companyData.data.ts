@@ -2,7 +2,7 @@ import { faker } from '@faker-js/faker';
 
 export const getCompanyData = () => {
 
-    return Array.from(Array(25)).map((companyItem) => {
+    return Array.from(Array(25)).map(() => {
         return {
             companyName: faker.company.name(),
             address: faker.person.jobArea(),
@@ -17,6 +17,7 @@ export const getCompanyData = () => {
             loanAmount: faker.number.int({ min: 100, max: 1000 }),
             loanInterest: faker.number.int({ max: 25 }),
             accountStatus: faker.datatype.boolean(),
+            logo: faker.image.avatar()
         }
     })
 }

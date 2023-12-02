@@ -18,7 +18,7 @@ const Accordion = ({ title, children }: AccordianTypes) => {
         <h3 className="text-sm text-white">{title}</h3>
       </div>
       {isOpen && (
-        <div className="px-2 py-2">
+        <div className="px-2 py-2 ease-out duration-500">
           {children}
         </div>
       )}

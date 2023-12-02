@@ -4,4 +4,5 @@ export interface SliderTypes {
     step: number;
     onChange: (value: number) => void;
     title: string
+    currentValue: number
   }
