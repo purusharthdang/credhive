@@ -50,7 +50,9 @@ const CompanyDetails = ({ companyData }: CompanyDetailTypes) => {
 
   return (
     <div>
-      <button onClick={() => setIsChartOpen(true)}>
+      <button
+      className='px-4 bg-blue-600 text-white rounded' 
+      onClick={() => setIsChartOpen(true)}>
         Show chart
       </button>
       <div className='grid grid-cols-2 gap-2 break-words'>
